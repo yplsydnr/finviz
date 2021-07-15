@@ -49,13 +49,11 @@ def get_stock(ticker):
 def get_profile(ticker):
     get_page(ticker)
     page_parsed = STOCK_PAGE[ticker]
-    all_rows = [
+    data = [
         row.xpath("td//text()")
         for row in page_parsed.cssselect('tr[class="table-light3-row"]')
     ]
-    #table = page_parsed.cssselect('tr[class="table-light3-row"]')[0]
-    #description = page_parsed.cssselect('td[class="fullview-profile"]')
-    return all_rows
+    return data
 
 def get_insider(ticker):
     """
