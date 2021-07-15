@@ -126,6 +126,11 @@ Individual stocks
     >>>
     >>> finviz.get_analyst_price_targets('AAPL')
     [{'date': '2019-10-24', 'category': 'Reiterated', 'analyst': 'UBS', 'rating': 'Buy', 'price_from': 235, 'price_to': 275}, ...
+    >>>
+    >>> finviz.get_profile('AAPL')
+    [['Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. It also sells various related services. The company offers iPhone,
+    a line of smartphones ...']]
+
 
 Downloading charts
 ===================
