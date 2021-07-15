@@ -44,9 +44,13 @@ def get_stock(ticker):
         for column in range(0, 11, 2):
             data[row[column]] = row[column + 1]
 
-    data['prof']=page_parsed.cssselect('tr[class="fullview-profile"]')
     return data
 
+def get_profile(ticker):
+    get_page(ticker)
+    page_parsed = STOCK_PAGE[ticker]
+    description = page_parsed.cssselect('td[class="fullview-profile"]')
+    return description
 
 def get_insider(ticker):
     """
